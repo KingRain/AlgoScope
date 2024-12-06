@@ -4,6 +4,13 @@ import { quickSort } from "../algorithms/quickSort";
 import { mergeSort } from "../algorithms/mergeSort";
 import { selectionSort } from "../algorithms/selectionSort";
 import { insertionSort } from "../algorithms/insertionSort";
+import { bucketSort } from "../algorithms/bucketSort";
+import { cocktailSort } from "../algorithms/cocktailSort";
+import { combSort } from "../algorithms/combSort";
+import { heapSort } from "../algorithms/heapSort";
+import { shellSort } from "../algorithms/shellSort";
+import { radixSort } from "../algorithms/radixSort";
+
 
 export default function TopBar() {
   const [currentAlgo, setCurrentAlgo] = useState("");
@@ -54,8 +61,25 @@ export default function TopBar() {
       case "InsertionSort":
         insertionSort(array, setArray, setIsSorting, currentSpeed);
         break;
+      case "BucketSort":
+        bucketSort(array, setArray, setIsSorting, currentSpeed);
+        break;
+      case "CocktailSort":
+        cocktailSort(array, setArray, setIsSorting, currentSpeed);
+        break;
+      case "CombSort":
+        combSort(array, setArray, setIsSorting, currentSpeed);
+        break;
+      case "HeapSort":
+        heapSort(array, setArray, setIsSorting, currentSpeed);
+        break;
+      case "ShellSort":
+        shellSort(array, setArray, setIsSorting, currentSpeed);
+        break;
+      case "RadixSort":
+        radixSort(array, setArray, setIsSorting, currentSpeed);
+        break;
       default:
-        setIsSorting(false);
         break;
     }
   };
@@ -92,6 +116,12 @@ export default function TopBar() {
           <option value="MergeSort">Merge Sort</option>
           <option value="SelectionSort">Selection Sort</option>
           <option value="InsertionSort">Insertion Sort</option>
+          <option value="BucketSort">Bucket Sort</option>
+          <option value="CocktailSort">Cocktail Sort</option>
+          <option value="CombSort">Comb Sort</option>
+          <option value="HeapSort">Heap Sort</option>
+          <option value="ShellSort">Shell Sort</option>
+          <option value="RadixSort">Radix Sort</option>
         </select>
         <p className="text-base font-normal text-text mr-2">Speed (inverted):</p>
         <input
