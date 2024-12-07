@@ -5,8 +5,10 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      <TopBar/>
-      <Footer />
+      <div className="overflow-x-hidden">
+        <TopBar />
+        <Footer />
+      </div>
     </>
   );
 }
