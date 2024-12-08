@@ -35,7 +35,7 @@ export default function InfoPanel({ algorithm, description }) {
         className={`flex flex-col border rounded-lg bg-text shadow-lg w-full h-auto p-6 space-y-4 transition-transform duration-300 ${animationState}`}
       >
         {/* Algorithm Title */}
-        <h1 className="font-extrabold text-2xl text-background mb-2 text-center">
+        <h1 className="font-extrabold text-2xl text-background mb-2 text-center underline">
           {displayAlgorithm}
         </h1>
 
